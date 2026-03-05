@@ -1,5 +1,10 @@
 import { ScanFace } from "lucide-react";
 
+const scrollTo = (id: string) => (e: React.MouseEvent) => {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-glass-border">
     <div className="container mx-auto px-4 h-16 flex items-center justify-between">
