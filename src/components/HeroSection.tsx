@@ -14,10 +14,10 @@ const HeroSection = () => {
             Smart, Fast and Secure Attendance using Facial Recognition
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="glow-button px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-lg">
+            <button onClick={() => document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })} className="glow-button px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-lg">
               Try Demo
             </button>
-            <button className="px-8 py-3 rounded-xl border border-glass-border bg-glass/30 backdrop-blur text-foreground font-semibold text-lg hover:bg-glass/50 transition-all duration-300">
+            <button onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })} className="px-8 py-3 rounded-xl border border-glass-border bg-glass/30 backdrop-blur text-foreground font-semibold text-lg hover:bg-glass/50 transition-all duration-300">
               Learn More
             </button>
           </div>
