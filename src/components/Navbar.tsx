@@ -8,12 +8,12 @@ const Navbar = () => (
         <span className="gradient-text">FaceAttend</span>
       </a>
       <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-        <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-        <a href="#demo" className="hover:text-foreground transition-colors">Demo</a>
-        <a href="#" className="hover:text-foreground transition-colors">Dashboard</a>
-        <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+        <a href="#features" onClick={scrollTo("features")} className="hover:text-foreground transition-colors cursor-pointer">Features</a>
+        <a href="#demo" onClick={scrollTo("demo")} className="hover:text-foreground transition-colors cursor-pointer">Demo</a>
+        <a href="#dashboard" onClick={scrollTo("dashboard")} className="hover:text-foreground transition-colors cursor-pointer">Dashboard</a>
+        <a href="#contact" onClick={scrollTo("contact")} className="hover:text-foreground transition-colors cursor-pointer">Contact</a>
       </div>
-      <button className="glow-button px-5 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium">
+      <button onClick={scrollTo("demo")} className="glow-button px-5 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium">
         Get Started
       </button>
     </div>
