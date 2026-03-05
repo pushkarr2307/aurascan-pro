@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => (
-  <footer className="relative z-10 border-t border-glass-border">
+  <footer id="contact" className="relative z-10 border-t border-glass-border">
     <div className="container mx-auto px-4 py-12">
       <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
