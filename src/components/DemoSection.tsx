@@ -153,7 +153,7 @@ const DemoSection = () => {
                   </p>
                   <div className="text-sm text-muted-foreground space-y-0.5 mt-1">
                     <p>
-                      <span className="text-foreground/80">Name:</span> John Doe
+                      <span className="text-foreground/80">Name:</span> Pushkar Tamboli
                     </p>
                     <p>
                       <span className="text-foreground/80">Student ID:</span>{" "}
