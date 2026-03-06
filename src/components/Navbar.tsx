@@ -1,4 +1,5 @@
-import { ScanFace } from "lucide-react";
+import { ScanFace, LayoutDashboard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const scrollTo = (id: string) => (e: React.MouseEvent) => {
   e.preventDefault();
