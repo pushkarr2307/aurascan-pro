@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { ScanFace, CheckCircle2, Camera, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import * as faceapi from "face-api.js";
+import { supabase } from "@/integrations/supabase/client";
 
 type DemoState = "idle" | "loading" | "scanning" | "detected";
 
