@@ -1,4 +1,5 @@
-import { ScanFace } from "lucide-react";
+import { ScanFace, LayoutDashboard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const scrollTo = (id: string) => (e: React.MouseEvent) => {
   e.preventDefault();
@@ -17,6 +18,10 @@ const Navbar = () => (
         <a href="#demo" onClick={scrollTo("demo")} className="hover:text-foreground transition-colors cursor-pointer">Demo</a>
         <a href="#dashboard" onClick={scrollTo("dashboard")} className="hover:text-foreground transition-colors cursor-pointer">Dashboard</a>
         <a href="#contact" onClick={scrollTo("contact")} className="hover:text-foreground transition-colors cursor-pointer">Contact</a>
+        <Link to="/admin" className="flex items-center gap-1 hover:text-foreground transition-colors">
+          <LayoutDashboard className="w-4 h-4" />
+          Admin
+        </Link>
       </div>
       <button onClick={scrollTo("demo")} className="glow-button px-5 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium">
         Get Started
