@@ -43,9 +43,25 @@ const DemoSection = () => {
         );
         if (detection) {
           if (intervalRef.current) clearInterval(intervalRef.current);
-          setTimestamp(new Date().toLocaleString());
+          const now = new Date();
+          setTimestamp(now.toLocaleString());
           setState("detected");
-          // Keep camera running to show the frozen frame
+
+          // Store attendance in database
+          const dateStr = now.toISOString().split("T")[0];
+          const timeStr = now.toTimeString().split(" ")[0];
+          supabase
+            .from("attendance")
+            .insert({
+              student_name: "Pushkar Tamboli",
+              student_id: "STU-2024-0847",
+              date: dateStr,
+              time: timeStr,
+            })
+            .then(({ error }) => {
+              if (error) console.error("Failed to save attendance:", error);
+            });
+
           setTimeout(() => {
             stopCamera();
           }, 3000);
